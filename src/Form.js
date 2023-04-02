@@ -4,7 +4,6 @@ import History from './History'
 
 export const Form = () =>{
     let [formValue,setformValue] = useState();
-    let [Gender,setGender] = useState();
     let {GenderApi,addInfo} = useContext(Global)
     async function Callback(event){
 
@@ -16,7 +15,6 @@ export const Form = () =>{
         if(gen==null){
            gen="other"
         }
-        setGender(gen)
         let count = GenderApi.length
           addInfo({
             id: ++count,
